@@ -1,0 +1,133 @@
+@import url("normalize.scss")
+
+$mobile: 375px
+$desktop: 1440px
+
+//Colors
+
+
+$moderatevViolet: hsl(263, 55%, 52%)
+$veryDarkGrayishBlue: hsl(217, 19%, 35%)
+$veryDarkBlackishBlue: hsl(219, 29%, 14%)
+$white: hsl(0, 0%, 100%)
+
+//Neutral colors
+$lightGray: hsl(0, 0%, 81%)
+$lightGrayishBlue: hsl(210, 46%, 95%)
+
+
+@font-face
+    font-family: "Barlow"
+    src : url('../fonts/BarlowSemiCondensed-Medium.woff2')
+    font-weight: 500
+    font-style: normal
+@font-face
+    font-family: "Barlow"
+    src : url('../fonts/BarlowSemiCondensed-SemiBold.woff2')
+    font-weight: 600
+    font-style: normal
+
+
+body
+    font-family: "Barlow"
+    min-width: $mobile
+    max-width: 600px
+    margin: 0 auto
+    padding: 5em 2em
+    font-size: 13px
+    background-color: $lightGray
+
+
+.container
+    display: grid
+    grid-template-rows: repeat(5, auto)
+    row-gap: 2em
+.card
+    display: flex
+    flex-direction: column
+    border-radius: 1em
+    padding: 2em
+    position: relative
+    color: $white
+    &__head
+        display: flex
+        align-items: center
+        margin-bottom: 1rem
+    &__person_avatar
+        margin-right: 1em
+    &__logo
+        width: 100px
+        height: 100px
+        background-image: url(../img/bg-pattern-quotation.svg)
+        position: absolute
+        top: 1px
+        right: 50px
+.person_avatar
+    width: 30px
+    height: 30px
+    border-radius: 50%
+
+.person_avatar-1
+    border: 2px solid hsl(0, 0%, 81%, 50%)
+.person_status
+    font-weight: 500
+    opacity: 50%
+.text
+    z-index: 1
+.story
+    font-size: 1.5em
+    margin-bottom: 1rem
+.quote
+    font-weight: 500
+    opacity: 70%
+
+
+
+.card-1
+    background-color: $moderatevViolet
+.card-2
+    background-color: $veryDarkGrayishBlue
+.card-3
+    background-color: $white
+    color: $veryDarkGrayishBlue
+.card-4
+    background-color: $veryDarkBlackishBlue
+.card-5
+    background-color: $white
+    color: $veryDarkGrayishBlue
+.quote
+    margin: 0
+.quote > p::before
+    content: "“ "
+.quote > p::after
+    content: " ”"
+
+  
+
+
+
+
+
+
+@media (min-width: 1439px)
+    body
+        display: grid
+        align-content: center
+        max-width: 2000px
+        padding-inline: 10em
+    .container
+        grid-template: repeat(2, auto) / repeat(4, auto)
+        gap: 2em
+    .card
+        min-height: 00px
+    .card-1
+        grid-column: span 2
+    .card-3
+        grid-row: span 2
+    .card-5
+        grid-column: span 2
+
+  
+        
+
+    
